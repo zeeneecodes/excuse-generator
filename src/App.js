@@ -1,6 +1,19 @@
+import { useState } from 'react';
 import './App.css';
+import Axios from 'axios';
+
+
+
 
 function App() {
+  const [famExcuse, setFamilyExcuse] = useState('');
+
+  const familyExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
+      setFamilyExcuse(res.data[0].excuse);
+    })
+  }
+
   return (
     <>
      <header>
@@ -11,8 +24,8 @@ function App() {
       <div className='inner-container'>
         <div className='excuse-type'>
           <h3>Family</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={familyExcuse}>Generate</button>
+          <p>{famExcuse}</p>
         </div>
 
         <div className='excuse-type'>
