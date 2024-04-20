@@ -73,7 +73,7 @@ function App() {
   return (
     <>
      <header>
-      <h1 className='header'>Generate an Excuse!</h1>
+      <h1 className='header'>Generate a Silly Excuse!</h1>
      </header>
 
      <section>
