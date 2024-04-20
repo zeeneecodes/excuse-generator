@@ -14,6 +14,7 @@ function App() {
   const [funExcuse, setFunnyExcuse] = useState('');
   const [unbExcuse, setUnbelievableExcuse] = useState('');
   const [devExcuse, setDevelopersExcuse] = useState('');
+  const [gamExcuse, setGamingExcuse] = useState('');
 
   const familyExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
@@ -60,6 +61,12 @@ function App() {
   const developersExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/developers/').then((res) => {
       setDevelopersExcuse(res.data[0].excuse);
+    })
+  }
+  
+  const gamingExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/gaming/').then((res) => {
+      setGamingExcuse(res.data[0].excuse);
     })
   }
 
@@ -121,8 +128,8 @@ function App() {
 
         <div className='excuse-type'>
           <h3>Gaming</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={gamingExcuse}>Generate</button>
+          <p>{gamExcuse}</p>
         </div>
       </div>
      </section>
