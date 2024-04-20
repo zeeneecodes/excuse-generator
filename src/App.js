@@ -7,10 +7,17 @@ import Axios from 'axios';
 
 function App() {
   const [famExcuse, setFamilyExcuse] = useState('');
+  const [offExcuse, setOfficeExcuse] = useState('');
 
   const familyExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
       setFamilyExcuse(res.data[0].excuse);
+    })
+  }
+  
+  const officeExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/office/').then((res) => {
+      setOfficeExcuse(res.data[0].excuse);
     })
   }
 
@@ -30,8 +37,8 @@ function App() {
 
         <div className='excuse-type'>
           <h3>Office</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={officeExcuse}>Generate</button>
+          <p>{offExcuse}</p>
         </div>
 
         <div className='excuse-type'>
