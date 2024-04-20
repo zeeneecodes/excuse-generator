@@ -9,6 +9,8 @@ function App() {
   const [famExcuse, setFamilyExcuse] = useState('');
   const [offExcuse, setOfficeExcuse] = useState('');
   const [chiExcuse, setChildrenExcuse] = useState('');
+  const [colExcuse, setCollegeExcuse] = useState('');
+  const [parExcuse, setPartyExcuse] = useState('');
 
   const familyExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
@@ -25,6 +27,18 @@ function App() {
   const childrenExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/children/').then((res) => {
       setChildrenExcuse(res.data[0].excuse);
+    })
+  }
+  
+  const collegeExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/college/').then((res) => {
+      setCollegeExcuse(res.data[0].excuse);
+    })
+  }
+  
+  const partyExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/party/').then((res) => {
+      setPartyExcuse(res.data[0].excuse);
     })
   }
 
@@ -56,14 +70,14 @@ function App() {
 
         <div className='excuse-type'>
           <h3>College</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={collegeExcuse}>Generate</button>
+          <p>{colExcuse}</p>
         </div>
 
         <div className='excuse-type'>
           <h3>Party</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={partyExcuse}>Generate</button>
+          <p>{parExcuse}</p>
         </div>
 
         <div className='excuse-type'>
