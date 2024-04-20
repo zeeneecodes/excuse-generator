@@ -12,6 +12,7 @@ function App() {
   const [colExcuse, setCollegeExcuse] = useState('');
   const [parExcuse, setPartyExcuse] = useState('');
   const [funExcuse, setFunnyExcuse] = useState('');
+  const [unbExcuse, setUnbelievableExcuse] = useState('');
 
   const familyExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
@@ -44,8 +45,14 @@ function App() {
   }
   
   const funnyExcuse = () => {
-    Axios.get('https://excuser-three.vercel.app/v1/excuse/party/').then((res) => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/funny/').then((res) => {
       setFunnyExcuse(res.data[0].excuse);
+    })
+  }
+  
+  const unbelievableExcuse = () => {
+    Axios.get('https://excuser-three.vercel.app/v1/excuse/unbelievable/').then((res) => {
+      setUnbelievableExcuse(res.data[0].excuse);
     })
   }
 
@@ -95,8 +102,8 @@ function App() {
         
         <div className='excuse-type'>
           <h3>Unbelievable</h3>
-          <button>Generate</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum malesuada justo, eget gravida orci.</p>
+          <button onClick={unbelievableExcuse}>Generate</button>
+          <p>{unbExcuse}</p>
         </div>
 
         <div className='excuse-type'>
