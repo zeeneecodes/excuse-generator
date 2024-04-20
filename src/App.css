@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+	box-sizing: border-box;
+  font-family: Arial;
+  background-color: rgb(247, 247, 247);
+  position: fixed;
+  padding-top: 6.25rem;
+}
+
+header {
+  background-color: rgb(121, 204, 188);
+  color:  rgb(33, 71, 64);
+  display: flex;
+  padding: 1.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  margin: 0 auto;
+}
+
+section {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2.5rem;
+  background-color: rgb(231, 231, 231);
+  width: 44rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  row-gap: 30px;
+  overflow: auto;
+  height: 35.6rem;
+}
+
+.inner-container::-webkit-scrollbar {
+  display: none;
+}
+
+.excuse-type {
+  background-color: rgb(234, 224, 123);
+  padding: 1%;
+  text-wrap: wrap;
+  width: 12.5rem;
+  padding: 20px 23px 25px 23px;
+  border-radius: .9rem;
+}
+
+.excuse-type h3 {
+  color: rgb(118, 112, 62);
+}
+
+.excuse-type button {
+  background-color: rgb(95, 180, 156);
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  box-shadow: 3px 4px rgba(0,0,0,0.8);
+}
+
+.excuse-type p {
+  margin-top: 20px;
+}
