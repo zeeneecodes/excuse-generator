@@ -215,6 +215,7 @@ section {
   }
 
   .left-section img {
+    top: 35rem;
     right: 50px;
    }
 
@@ -249,7 +250,8 @@ section {
   }
 
   .left-section img {
-    right: 50px;
+    top: 35rem;
+    right: 5rem;
    }
 
    .right-section {
