@@ -22,7 +22,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/family/').then((res) => {
       setFamilyExcuse(res.data[0].excuse);
 
-      if (famExcuse != '') {
+      if (famExcuse !== '') {
         setgeneratedExcuse('"'+famExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for Family Excuses just woke up! Please click me once more 🙏');
@@ -33,7 +33,7 @@ function App() {
   const officeExcuse = () => {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/office/').then((res) => {
       setOfficeExcuse(res.data[0].excuse);
-      if (offExcuse != '') {
+      if (offExcuse !== '') {
         setgeneratedExcuse('"'+offExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for the most needed Office Excuses just woke up! Please click me once more 🙏');
@@ -45,7 +45,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/children/').then((res) => {
       setChildrenExcuse(res.data[0].excuse);
 
-      if (chiExcuse != '') {
+      if (chiExcuse !== '') {
         setgeneratedExcuse('"'+chiExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for Children Excuses just woke up! Please click me once more 🙏');
@@ -57,7 +57,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/college/').then((res) => {
       setCollegeExcuse(res.data[0].excuse);
       
-      if (colExcuse != '') {
+      if (colExcuse !== '') {
         setgeneratedExcuse('"'+colExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for the useful College Excuses just woke up! Please click me once more 🙏');
@@ -69,7 +69,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/party/').then((res) => {
       setPartyExcuse(res.data[0].excuse);
 
-      if (parExcuse != '') {
+      if (parExcuse !== '') {
         setgeneratedExcuse('"'+parExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for the perfect Party Excuses just woke up! Please click me once more 🙏');
@@ -81,7 +81,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/funny/').then((res) => {
       setFunnyExcuse(res.data[0].excuse);
 
-      if (funExcuse != '') {
+      if (funExcuse !== '') {
         setgeneratedExcuse('"'+funExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for the ultimate Funny Excuses just woke up! Please click me once more 🙏');
@@ -93,7 +93,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/unbelievable/').then((res) => {
       setUnbelievableExcuse(res.data[0].excuse);
 
-      if (unbExcuse != '') {
+      if (unbExcuse !== '') {
         setgeneratedExcuse('"'+unbExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for my Unbelievable Excuses just woke up! Please click me once more 🙏');
@@ -105,7 +105,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/developers/').then((res) => {
       setDevelopersExcuse(res.data[0].excuse);
 
-      if (devExcuse != '') {
+      if (devExcuse !== '') {
         setgeneratedExcuse('"'+devExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for the most believable Developer Excuses just woke up! Please click me once more 🙏');
@@ -117,7 +117,7 @@ function App() {
     Axios.get('https://excuser-three.vercel.app/v1/excuse/gaming/').then((res) => {
       setGamingExcuse(res.data[0].excuse);
 
-      if (gamExcuse != '') {
+      if (gamExcuse !== '') {
         setgeneratedExcuse('"'+gamExcuse+'"');
       } else {
         setgeneratedExcuse('Hold on my brain for saying some silly Gaming Excuses just woke up! Please click me once more 🙏');
@@ -132,12 +132,12 @@ function App() {
           <h1 className='header'>Generate a Silly Excuse!</h1>
         </header>
         <article>{generatedExcuse}</article>
-        <img src={chillingPic}/>
+        <img src={chillingPic} alt='illustration of two people chilling on a couch'/>
       </div>
 
 
      <section>
-      <div className='inner-container'>
+      <div className='right-section'>
         <Excuse type='Family' toClick={familyExcuse} />
         <Excuse type='Office' toClick={officeExcuse}/>
         <Excuse type='Children' toClick={childrenExcuse}/>
