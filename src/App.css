@@ -15,11 +15,13 @@ body {
   font-family: Arial;
   background-color: rgb(247, 247, 247);
   position: fixed;
-  padding-top: 6.25rem;
+  padding-top: 1.25rem;
 }
 
 .main-container {
   display: flex;
+  overflow: auto;
+  height: 100vh;
 }
 
 .left-section {
@@ -36,7 +38,7 @@ header {
 .header {
   margin: 0 auto;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 6.25rem;
 }
 
 .left-section article {
@@ -56,9 +58,9 @@ header {
 
 .left-section img {
   position: absolute;
-  width: 400px;
+  width: 25rem;
   right: 0;
-  bottom: 0;
+  top: 21rem;
 }
 
 section {
@@ -67,7 +69,7 @@ section {
   display: flex;
 }
 
-.inner-container {
+.right-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2.5rem;
@@ -75,12 +77,7 @@ section {
   border-radius: 1.25rem;
   text-align: center;
   row-gap: 30px;
-  overflow: auto;
   height: 35.6rem;
-}
-
-.inner-container::-webkit-scrollbar {
-  display: none;
 }
 
 .excuse-type {
@@ -118,4 +115,154 @@ section {
   margin-top: 15px;
   margin-left: 4px;
   box-shadow: 0px 0px rgba(0,0,0,0.8);
+}
+
+
+@media (min-width: 1520.1px) {
+  html {
+   font-size: 14px;
+  }
+ 
+  .left-section img {
+   bottom: -5px;
+   flex: 65rem;
+  }
+ 
+ }
+ 
+ 
+@media (min-width: 1300px) and (max-width: 1520px) {
+  .left-section {
+    flex: 55rem;
+  }
+}
+
+
+@media (min-width: 1000.1px) and (max-width: 1300.1px) {
+  .left-section {
+    flex: 50rem;
+  }
+
+  .right-section {
+    grid-template-columns: 210px 210px;
+  }
+}
+
+@media (min-width: 700.1px) and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .left-section img {
+    width: 18rem;
+    right: 50px;
+   }
+
+   article {
+    width: 35rem;
+   }
+
+   .right-section {
+    margin: 0 auto;
+   }
+}
+
+@media (min-width: 500.1px) and (max-width: 700) {
+  html {
+    font-size: 10px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .left-section {
+    padding-right: 30px;
+    height: 25rem;
+  }
+
+  article {
+    width: 28rem;
+  }
+
+  .left-section img {
+    width: 12.5rem;
+    right: 50px;
+   }
+
+   .right-section {
+    margin-left: 30px;
+   }
+}
+
+@media (min-width: 400.1px) and (max-width: 500px) {
+  /* iphone 14 pmax*/
+  html {
+    font-size: 10px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .left-section {
+    height: 50rem;
+    padding-right:50px;
+  }
+
+  .left-section img {
+    right: 50px;
+   }
+
+   .right-section {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 30px;
+  }
+
+  .excuse-type {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  .excuse-type h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  /* iphone pro*/
+  html {
+    font-size: 10px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .left-section {
+    height: 50rem;
+    padding-right:50px;
+  }
+
+  .left-section img {
+    right: 50px;
+   }
+
+   .right-section {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+  }
+
+  .excuse-type {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  .excuse-type h3 {
+    font-size: 1.5rem;
+  }
 }
