@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Axios from 'axios';
+import chillingPic from './images/chilling.svg'
 
 
 
@@ -131,6 +132,7 @@ function App() {
           <h1 className='header'>Generate a Silly Excuse!</h1>
         </header>
         <article>{generatedExcuse}</article>
+        <img src={chillingPic}/>
       </div>
 
 

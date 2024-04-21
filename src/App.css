@@ -25,6 +25,7 @@ body {
 .left-section {
   margin-left: 50px;
   flex: 90rem;
+  position: relative;
 }
 
 header {
@@ -51,6 +52,13 @@ header {
 .excuse-type h3::selection {
   background-color: rgb(95, 180, 156);
   color: white;
+}
+
+.left-section img {
+  position: absolute;
+  width: 400px;
+  right: 0;
+  bottom: 0;
 }
 
 section {
