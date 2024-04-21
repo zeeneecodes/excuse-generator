@@ -18,33 +18,51 @@ body {
   padding-top: 6.25rem;
 }
 
-header {
-  background-color: rgb(121, 204, 188);
-  color:  rgb(33, 71, 64);
+.main-container {
   display: flex;
-  padding: 1.5%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+}
+
+.left-section {
+  margin-left: 50px;
+  flex: 90rem;
+}
+
+header {
+  color:  rgb(0, 0, 0);
+  display: flex;
 }
 
 .header {
   margin: 0 auto;
+  font-weight: 700;
+  font-size: 100px;
+}
+
+.left-section article {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: Georgia;
+  line-height: 2rem;
+}
+
+.left-section article::selection,
+.header::selection,
+.excuse-type h3::selection {
+  background-color: rgb(95, 180, 156);
+  color: white;
 }
 
 section {
   width: 100vw;
   position: relative;
   display: flex;
-  justify-content: center;
 }
 
 .inner-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2.5rem;
-  background-color: rgb(231, 231, 231);
   width: 44rem;
   border-radius: 1.25rem;
   text-align: center;
@@ -79,6 +97,6 @@ section {
   box-shadow: 3px 4px rgba(0,0,0,0.8);
 }
 
-.excuse-type p {
-  margin-top: 20px;
+.excuse-type button::selection {
+  background-color: rgb(118, 112, 62);
 }
