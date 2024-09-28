@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useExcuse(type) {
   const [excuse, setExcuse] = useState("");
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     async function generateExcuse() {
@@ -15,10 +16,11 @@ export function useExcuse(type) {
     }
 
     generateExcuse();
-  }, [type]);
+  }, [type, counter]);
 
-  useEffect(() => {
-    console.log(excuse);
-  }, [excuse]);
-  return excuse;
+  function increaseCounter() {
+    setCounter((e) => e + 1);
+  }
+
+  return { excuse, increaseCounter };
 }

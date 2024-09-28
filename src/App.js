@@ -16,10 +16,11 @@ function App() {
   const developersRef = useRef(null);
   const gamingRef = useRef(null);
 
-  const excuse = useExcuse(excuseType);
+  const { excuse, increaseCounter } = useExcuse(excuseType);
 
   function handleExcuse(type) {
     setExcuseType((e) => (e = type.toLowerCase()));
+    increaseCounter();
   }
 
   return (
