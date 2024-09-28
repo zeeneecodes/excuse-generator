@@ -15,7 +15,7 @@ body {
   font-family: Arial;
   background-color: rgb(247, 247, 247);
   position: fixed;
-  padding-top: 1.25rem;
+  padding-top: 7rem;
 }
 
 .main-container {
@@ -38,11 +38,11 @@ header {
 .header {
   margin: 0 auto;
   font-weight: 700;
-  font-size: 6.25rem;
+  font-size: 8rem;
 }
 
 .left-section article {
-  margin-top: 50px;
+  margin-top: .9rem;
   font-size: 1.5rem;
   font-style: italic;
   font-family: Georgia;
@@ -60,11 +60,11 @@ header {
   position: absolute;
   width: 25rem;
   right: 0;
-  top: 21rem;
+  top: 23rem;
 }
 
 section {
-  width: 100vw;
+  width: 60rem;
   position: relative;
   display: flex;
 }
@@ -73,7 +73,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2.5rem;
-  width: 44rem;
+  width: 50rem;
   border-radius: 1.25rem;
   text-align: center;
   row-gap: 30px;
@@ -84,7 +84,7 @@ section {
   background-color: rgb(234, 224, 123);
   padding: 1%;
   text-wrap: wrap;
-  width: 12.5rem;
+  width: 14rem;
   padding: 1.25rem 1.4rem;
   border-radius: .9rem;
 }
@@ -115,6 +115,12 @@ section {
   margin-top: 15px;
   margin-left: 4px;
   box-shadow: 0px 0px rgba(0,0,0,0.8);
+}
+
+.footer {
+  background-color: rgb(95, 180, 156);
+  width: 100vw;
+  height: 7rem;
 }
 
 

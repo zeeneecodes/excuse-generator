@@ -126,6 +126,7 @@ function App() {
   }
 
   return (
+    <>
     <div className='main-container'>
       <div className='left-section'>
         <header>
@@ -149,7 +150,11 @@ function App() {
         <Excuse type='Gaming' toClick={gamingExcuse}/>
       </div>
      </section>
+
     </div>
+    <footer className='footer'>&#169; 2024 zeeneecodes</footer>
+    
+    </>
   );
 }
 
