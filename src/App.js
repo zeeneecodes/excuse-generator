@@ -1,21 +1,10 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./App.css";
 import chillingPic from "./images/chilling.svg";
 import { useExcuse } from "./useExcuse";
 
 function App() {
   const [excuseType, setExcuseType] = useState("");
-
-  const familyRef = useRef(null);
-  const officeRef = useRef(null);
-  const childrenRef = useRef(null);
-  const collegeRef = useRef(null);
-  const partyRef = useRef(null);
-  const funnyRef = useRef(null);
-  const unbelievableRef = useRef(null);
-  const developersRef = useRef(null);
-  const gamingRef = useRef(null);
-
   const { excuse, increaseCounter } = useExcuse(excuseType);
 
   function handleExcuse(type) {
@@ -39,31 +28,15 @@ function App() {
 
         <section>
           <div className="right-section">
-            <Excuse type="Family" handleClick={handleExcuse} eRef={familyRef} />
-            <Excuse type="Office" handleClick={handleExcuse} eRef={officeRef} />
-            <Excuse
-              type="Children"
-              handleClick={handleExcuse}
-              eRef={childrenRef}
-            />
-            <Excuse
-              type="College"
-              handleClick={handleExcuse}
-              eRef={collegeRef}
-            />
-            <Excuse type="Party" handleClick={handleExcuse} eRef={partyRef} />
-            <Excuse type="Funny" handleClick={handleExcuse} eRef={funnyRef} />
-            <Excuse
-              type="Unbelievable"
-              handleClick={handleExcuse}
-              eRef={unbelievableRef}
-            />
-            <Excuse
-              type="Developers"
-              handleClick={handleExcuse}
-              eRef={developersRef}
-            />
-            <Excuse type="Gaming" handleClick={handleExcuse} eRef={gamingRef} />
+            <Excuse type="Family" handleClick={handleExcuse} />
+            <Excuse type="Office" handleClick={handleExcuse} />
+            <Excuse type="Children" handleClick={handleExcuse} />
+            <Excuse type="College" handleClick={handleExcuse} />
+            <Excuse type="Party" handleClick={handleExcuse} />
+            <Excuse type="Funny" handleClick={handleExcuse} />
+            <Excuse type="Unbelievable" handleClick={handleExcuse} />
+            <Excuse type="Developers" handleClick={handleExcuse} />
+            <Excuse type="Gaming" handleClick={handleExcuse} />
           </div>
         </section>
       </div>
@@ -72,14 +45,12 @@ function App() {
   );
 }
 
-function Excuse({ type, handleClick, eRef }) {
+function Excuse({ type, handleClick }) {
   return (
     <div className="excuse-type">
       <h3>{type}</h3>
       <div className="excuse-type__button-container">
-        <button onClick={() => handleClick(type)} ref={eRef}>
-          Generate
-        </button>
+        <button onClick={() => handleClick(type)}>Generate</button>
       </div>
     </div>
   );
