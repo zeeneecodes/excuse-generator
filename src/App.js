@@ -1,26 +1,7 @@
 import { useState, useRef } from "react";
 import "./App.css";
 import chillingPic from "./images/chilling.svg";
-
-/* 
-  const [excuseType, setExcuseType] = useState("")
-  const excuse = useExcuse(excuseType);
-
-  const familyRef = useRef(null);
-  const officeRef = useRef(null);
-  const childrenRef = useRef(null);
-  const collegeRef = useRef(null);
-  const partyRef = useRef(null);
-  const funnyRef = useRef(null);
-  const unbelievableRef = useRef(null);
-  const developersRef = useRef(null);
-  const gamingRef = useRef(null);
-
-  function handleExcuse(type) {
-    setExcuseType(e => type.toLowerCase());
-    console.log(excuseType)
-  }
-*/
+import { useExcuse } from "./useExcuse";
 
 function App() {
   const [excuseType, setExcuseType] = useState("");
@@ -35,6 +16,8 @@ function App() {
   const developersRef = useRef(null);
   const gamingRef = useRef(null);
 
+  const excuse = useExcuse(excuseType);
+
   function handleExcuse(type) {
     setExcuseType((e) => (e = type.toLowerCase()));
   }
@@ -46,7 +29,7 @@ function App() {
           <header>
             <h1 className="header">Generate a Silly Excuse!</h1>
           </header>
-          <article>sample</article>
+          <article>{excuse}</article>
           <img
             src={chillingPic}
             alt="illustration of two people chilling on a couch"
